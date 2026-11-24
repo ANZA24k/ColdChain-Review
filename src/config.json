@@ -1,1 +1,8 @@
-{"address":"","chainId":61999,"network":"GenLayer Studionet","rpc":"https://studio.genlayer.com/api","deploymentStatus":"Awaiting available Studio validators"}
+{
+  "address": "0xeC25c1Cf6F45c2623bE79f48ADF927ce7F1966dA",
+  "chainId": 61999,
+  "network": "GenLayer Studionet",
+  "rpc": "https://studio.genlayer.com/api",
+  "deploymentStatus": "Deployed",
+  "explorer": "https://explorer-studio.genlayer.com/address/0xeC25c1Cf6F45c2623bE79f48ADF927ce7F1966dA"
+}

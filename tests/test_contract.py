@@ -107,7 +107,7 @@ class ContractTests(unittest.TestCase):
         self.assertEqual(json.loads(self.c.get_shipment('CCR'))['result']['status'],'INCONCLUSIVE')
     def test_independent_semantic_validator(self):
         self.e['readings'][0][1]=9000;self.prepare();calls=[]
-        def prompt(_):
+        def prompt(_, **kwargs):
             calls.append(1);return json.dumps({'status':'COMPLIANT','policy_quote':'Unloading while sealed','incident_quote':'Unloading while sealed','reason':'Explicitly permitted'})
         gl.nondet.exec_prompt=prompt
         def nondet(leader,validator):
@@ -116,12 +116,12 @@ class ContractTests(unittest.TestCase):
         self.assertEqual(len(calls),2)
     def test_ungrounded_model_output(self):
         self.e['readings'][0][1]=9000;self.prepare()
-        gl.nondet.exec_prompt=lambda _:json.dumps({'status':'COMPLIANT','policy_quote':'invented','incident_quote':'invented','reason':'wrong'})
+        gl.nondet.exec_prompt=lambda _, **kwargs:json.dumps({'status':'COMPLIANT','policy_quote':'invented','incident_quote':'invented','reason':'wrong'})
         gl.vm.run_nondet_unsafe=lambda leader,validator:leader();self.c.assess('CCR')
         self.assertEqual(json.loads(self.c.get_shipment('CCR'))['result']['status'],'INCONCLUSIVE')
     def test_disagreement_rejected(self):
         self.e['readings'][0][1]=9000;self.prepare();calls=[]
-        def prompt(_):
+        def prompt(_, **kwargs):
             calls.append(1);return json.dumps({'status':'COMPLIANT' if len(calls)==1 else 'NON_COMPLIANT','policy_quote':'Unloading','incident_quote':'Unloading','reason':'test'})
         gl.nondet.exec_prompt=prompt
         def nondet(leader,validator):

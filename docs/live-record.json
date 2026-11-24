@@ -1,0 +1,108 @@
+{
+  "record": {
+    "challenge": "",
+    "counterparty": "0xcD72fA5B6A496d84B4A10bCFF31D3B7c12346a9e",
+    "evidence": {
+      "incident": "During unloading, the sealed shipment reached 9°C for 600 seconds. The shipment remained sealed throughout unloading.",
+      "readings": [
+        [
+          1795478400,
+          4500
+        ],
+        [
+          1795479000,
+          5000
+        ],
+        [
+          1795479600,
+          9000
+        ],
+        [
+          1795480200,
+          5000
+        ],
+        [
+          1795480800,
+          4500
+        ],
+        [
+          1795481400,
+          4500
+        ],
+        [
+          1795482000,
+          4500
+        ]
+      ],
+      "source": "Synthetic verification fixture CCR-LIVE-001. Not a sensor attestation."
+    },
+    "evidence_hash": "be3a878e5f6df1be00a49287dda867da92d4cfd89b85245c5c5e1180096b6a84",
+    "head": "bc203fb532afe007f3fbb5907aa74ae040c7e1cca1e696abceffceda65ed5c4b",
+    "owner": "0xcD72fA5B6A496d84B4A10bCFF31D3B7c12346a9e",
+    "phase": "SUBMITTED",
+    "policy": {
+      "end": 1795482000,
+      "exception_clause": "A single unloading excursion up to 900 seconds at or below 10000 milli-Celsius is permitted if the incident report identifies unloading, states the duration, and confirms the shipment remained sealed. No other excursion is permitted.",
+      "hard_max_mc": 15000,
+      "hard_min_mc": 0,
+      "max_excursion_s": 300,
+      "max_gap_s": 600,
+      "max_mc": 8000,
+      "max_total_s": 600,
+      "min_mc": 2000,
+      "name": "Synthetic unloading exception verification",
+      "start": 1795478400
+    },
+    "policy_hash": "cab8b9e9d4183c4125ebebeb7b8a31557728344c8a0e824f686c54aa45333b6a",
+    "result": null,
+    "round": 0,
+    "sequence": 3
+  },
+  "receipts": [
+    {
+      "action": "REGISTER",
+      "actor": "0xcD72fA5B6A496d84B4A10bCFF31D3B7c12346a9e",
+      "challenge_hash": "12ae32cb1ec02d01eda3581b127c1fee3b0dc53572ed6baf239721a03d82e126",
+      "evidence_hash": "",
+      "hash": "8432bcf8657bdfd71538755fd3a96a93e82a2c4b536213904a3bb75c07eb56f4",
+      "phase": "REGISTERED",
+      "policy_hash": "cab8b9e9d4183c4125ebebeb7b8a31557728344c8a0e824f686c54aa45333b6a",
+      "previous": "0000000000000000000000000000000000000000000000000000000000000000",
+      "result": null,
+      "round": 0,
+      "sequence": 1,
+      "shipment": "CCR-LIVE-001",
+      "state": "4b150e9da32684b77d0af925529189271a02f2bdc557e7b88b45773b00d04f42"
+    },
+    {
+      "action": "ACCEPT_POLICY",
+      "actor": "0xcD72fA5B6A496d84B4A10bCFF31D3B7c12346a9e",
+      "challenge_hash": "12ae32cb1ec02d01eda3581b127c1fee3b0dc53572ed6baf239721a03d82e126",
+      "evidence_hash": "",
+      "hash": "f3ab135bdc1281c45f122ef96f170dba54e0ae32c5b33f9f78ad797e084af737",
+      "phase": "LOCKED",
+      "policy_hash": "cab8b9e9d4183c4125ebebeb7b8a31557728344c8a0e824f686c54aa45333b6a",
+      "previous": "8432bcf8657bdfd71538755fd3a96a93e82a2c4b536213904a3bb75c07eb56f4",
+      "result": null,
+      "round": 0,
+      "sequence": 2,
+      "shipment": "CCR-LIVE-001",
+      "state": "1652f5b681e54cb3270abb8f4452d31c45c32b4b6afc91e54a995aa373864bf2"
+    },
+    {
+      "action": "SUBMIT_EVIDENCE",
+      "actor": "0xcD72fA5B6A496d84B4A10bCFF31D3B7c12346a9e",
+      "challenge_hash": "12ae32cb1ec02d01eda3581b127c1fee3b0dc53572ed6baf239721a03d82e126",
+      "evidence_hash": "be3a878e5f6df1be00a49287dda867da92d4cfd89b85245c5c5e1180096b6a84",
+      "hash": "bc203fb532afe007f3fbb5907aa74ae040c7e1cca1e696abceffceda65ed5c4b",
+      "phase": "SUBMITTED",
+      "policy_hash": "cab8b9e9d4183c4125ebebeb7b8a31557728344c8a0e824f686c54aa45333b6a",
+      "previous": "f3ab135bdc1281c45f122ef96f170dba54e0ae32c5b33f9f78ad797e084af737",
+      "result": null,
+      "round": 0,
+      "sequence": 3,
+      "shipment": "CCR-LIVE-001",
+      "state": "14292a1d5d7374557b719226bb252bce153963412715930d4655b5ca3d7c633e"
+    }
+  ]
+}
