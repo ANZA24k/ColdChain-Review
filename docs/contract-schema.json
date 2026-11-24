@@ -1,0 +1,116 @@
+{
+  "ctor": {
+    "params": [],
+    "kwparams": {}
+  },
+  "methods": {
+    "accept": {
+      "params": [
+        [
+          "shipment",
+          "string"
+        ]
+      ],
+      "kwparams": {},
+      "readonly": false,
+      "ret": "any",
+      "payable": false
+    },
+    "assess": {
+      "params": [
+        [
+          "shipment",
+          "string"
+        ]
+      ],
+      "kwparams": {},
+      "readonly": false,
+      "ret": "any",
+      "payable": false
+    },
+    "challenge": {
+      "params": [
+        [
+          "shipment",
+          "string"
+        ],
+        [
+          "reason",
+          "string"
+        ]
+      ],
+      "kwparams": {},
+      "readonly": false,
+      "ret": "any",
+      "payable": false
+    },
+    "get_receipt": {
+      "params": [
+        [
+          "shipment",
+          "string"
+        ],
+        [
+          "sequence",
+          "int"
+        ]
+      ],
+      "kwparams": {},
+      "readonly": true,
+      "ret": "string"
+    },
+    "get_shipment": {
+      "params": [
+        [
+          "shipment",
+          "string"
+        ]
+      ],
+      "kwparams": {},
+      "readonly": true,
+      "ret": "string"
+    },
+    "register": {
+      "params": [
+        [
+          "shipment",
+          "string"
+        ],
+        [
+          "counterparty",
+          "string"
+        ],
+        [
+          "policy_json",
+          "string"
+        ]
+      ],
+      "kwparams": {},
+      "readonly": false,
+      "ret": "any",
+      "payable": false
+    },
+    "submit": {
+      "params": [
+        [
+          "shipment",
+          "string"
+        ],
+        [
+          "evidence_json",
+          "string"
+        ]
+      ],
+      "kwparams": {},
+      "readonly": false,
+      "ret": "any",
+      "payable": false
+    },
+    "total_shipments": {
+      "params": [],
+      "kwparams": {},
+      "readonly": true,
+      "ret": "int"
+    }
+  }
+}
