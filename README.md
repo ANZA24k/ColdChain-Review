@@ -2,10 +2,10 @@
 
 Intelligent shipment temperature compliance verification with GenLayer.
 
-- Website: Netlify URL will be added after the owner uploads the supplied deployment ZIP.
+- Website: [Open ColdChainReview](https://fastidious-pasca-1d66e0.netlify.app/)
 - Contract: [0xeC25c1Cf6F45c2623bE79f48ADF927ce7F1966dA](https://explorer-studio.genlayer.com/address/0xeC25c1Cf6F45c2623bE79f48ADF927ce7F1966dA)
 - Network: Studionet (61999)
-- [Source](contracts/coldchain_review.py), [evidence and remaining verification](docs/EVIDENCE.md), [security](SECURITY.md)
+- [Source](contracts/coldchain_review.py), [verification evidence](docs/EVIDENCE.md), [security](SECURITY.md)
 
 ## Problem and workflow
 
