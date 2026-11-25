@@ -3,8 +3,8 @@
   "address": "0xeC25c1Cf6F45c2623bE79f48ADF927ce7F1966dA",
   "source_sha256": "6b3cf4087a8a2e015d4a70abd488489c98f374aeeb156de08c3d50f817dec901",
   "shipment": "CCR-LIVE-001",
-  "phase": "SUBMITTED",
-  "round": 0,
-  "verdict": null,
-  "receipts": 3
+  "phase": "REVIEWED",
+  "round": 2,
+  "verdict": "COMPLIANT",
+  "receipts": 6
 }

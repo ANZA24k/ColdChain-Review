@@ -2,7 +2,7 @@
 
 Intelligent shipment temperature compliance verification with GenLayer.
 
-- Website: https://coldchain-review.vercel.app
+- Website: Netlify URL will be added after the owner uploads the supplied deployment ZIP.
 - Contract: [0xeC25c1Cf6F45c2623bE79f48ADF927ce7F1966dA](https://explorer-studio.genlayer.com/address/0xeC25c1Cf6F45c2623bE79f48ADF927ce7F1966dA)
 - Network: Studionet (61999)
 - [Source](contracts/coldchain_review.py), [evidence and remaining verification](docs/EVIDENCE.md), [security](SECURITY.md)
@@ -17,7 +17,7 @@ Integer arithmetic detects hard breaches, coverage gaps, longest excursions, and
 
 ## Try it
 
-Open Shipment workspace and load CCR-LIVE-001 without a wallet. Inspect the record and Receipt ledger, which verifies its SHA-256 chain before displaying it. This fixture is synthetic. Its corrected semantic assessment and challenge lifecycle still require completion; see EVIDENCE.md.
+Open Shipment workspace and load CCR-LIVE-001 without a wallet. Inspect the record and Receipt ledger, which verifies its SHA-256 chain before displaying it. This fixture is synthetic. Its complete lifecycle has finalized: two COMPLIANT assessments and six verified receipts; see EVIDENCE.md.
 
 For a new shipment, connect a browser wallet on Studionet or use GenLayer Studio's inbuilt wallet. Use a new ID, register the policy, switch to the counterparty to accept, return to the owner to submit, and assess. Either party can challenge after the first successful assessment and assess once more.
 

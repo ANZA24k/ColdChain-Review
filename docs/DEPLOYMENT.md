@@ -1,17 +1,32 @@
-# Deployment
+# Netlify deployment
 
-Production: https://coldchain-review.vercel.app
-Vercel project: coldchain-review, team anza0x.
-Framework: Vite. Node: 22.x. Build: npm run build. Output: dist.
+The owner will publish ColdChainReview manually on Netlify and provide the final public URL. No Netlify login or secret is required in the application.
 
-Vercel's Git integration returned repo_no_access for ANZA24k/ColdChain-Review. The app is published directly through Vercel's authenticated deployment API; source is maintained through the connected GitHub account. A GitHub push currently does not automatically publish a website update.
+## Ready-to-upload ZIP
 
-Contract: 0xeC25c1Cf6F45c2623bE79f48ADF927ce7F1966dA
-RPC: https://studio.genlayer.com/api
-Network: Studionet, 61999.
+Use ColdChainReview-Netlify.zip. Its root contains index.html, assets/, _headers, and _redirects. Upload the ZIP through Netlify's manual deploy interface, or extract it and drop the extracted folder. Do not upload the source repository as a manual static deploy: it needs a build first.
 
-Upload contracts/coldchain_review.py to Studio, use Normal (Full Consensus), and deploy with no constructor parameters. Wait for finalization and check execution success separately from consensus outcome. Configure src/config.json with the resulting address. Never put signing keys in frontend configuration.
+After publishing, open the site, select Shipment workspace, and load CCR-LIVE-001. Open Receipt ledger to inspect the verified six-step history and export JSON. Connect a browser wallet only for your own new submissions; public reads do not require it. Studio's inbuilt wallet remains a separate transaction surface.
 
-The current development instance was updated to request structured JSON output after multi-model testing exposed format-related disagreement. getContractCode was fetched afterward and the exact source recovered to this repository. See EVIDENCE.md for its SHA-256.
+## Building from source
 
-To resume live verification, use Studio's inbuilt account 0xcD72fA5B6A496d84B4A10bCFF31D3B7c12346a9e and the deployed contract. CCR-LIVE-001 is currently SUBMITTED, round 0. Call assess; verify a successful accepted result. Then challenge once and assess again. Record actual hashes and verify the receipt chain. Do not mark these steps completed until confirmed.
+Requires Node 22+ and Python 3.12+.
+
+```bash
+npm ci
+npm test
+npm run build
+```
+
+netlify.toml sets build command npm run build and publish directory dist. The public/ directory supplies the security headers and SPA fallback in manual deployments. .netlify/ is excluded from version control. No environment secrets are required.
+
+## GenLayer
+
+- Contract: 0xeC25c1Cf6F45c2623bE79f48ADF927ce7F1966dA
+- Network: Studionet, 61999
+- RPC: https://studio.genlayer.com/api
+- Explorer: https://explorer-studio.genlayer.com/address/0xeC25c1Cf6F45c2623bE79f48ADF927ce7F1966dA
+
+The release address is configured in src/config.json. Never include a private key or seed phrase in frontend configuration. Studio's inbuilt signer belongs to Studio and is not shared across origins.
+
+To deploy a separate contract, validate its schema, upload contracts/coldchain_review.py in Studio, deploy in Normal (Full Consensus), verify finalization and successful accepted execution, update src/config.json, rebuild, and publish the new output. Source changes must be verified against getContractCode. See EVIDENCE.md for this release's checks and source hash.
