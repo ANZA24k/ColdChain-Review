@@ -1,6 +1,8 @@
 # Netlify deployment
 
-The owner will publish ColdChainReview manually on Netlify and provide the final public URL. No Netlify login or secret is required in the application.
+Production website: https://fastidious-pasca-1d66e0.netlify.app/
+
+The owner published the supplied deployment ZIP manually on Netlify. No Netlify login or secret is required in the application.
 
 ## Ready-to-upload ZIP
 
