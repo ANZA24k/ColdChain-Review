@@ -2,7 +2,9 @@
 
 ## Release
 
-The owner will publish the supplied static ZIP on Netlify and provide the public URL. The package is built and tested; it has not been published to Netlify by the agent.
+Public website: https://fastidious-pasca-1d66e0.netlify.app/
+
+The owner published the supplied static ZIP manually on Netlify. On 25 November 2026, the public page returned HTTP 200 with the ColdChainReview title and the expected security header. The served index.html, main JavaScript bundle, and CSS bundle were downloaded and matched the supplied deployment files byte for byte.
 
 Contract: https://explorer-studio.genlayer.com/address/0xeC25c1Cf6F45c2623bE79f48ADF927ce7F1966dA
 
@@ -50,3 +52,7 @@ The synthetic 2–8°C example is an agreed fixture, not a product safety recomm
 ## Final package recheck
 
 The final static package again passed all 15 responsive/navigation/missing-wallet checks. The last headless six-receipt browser recheck was blocked by the public RPC returning HTTP 429 (30 requests per minute), so that particular browser run did not pass. The independent finalized contract/source/hash verification had already succeeded for round 2 and all six receipts. This temporary service limit does not invalidate the committed record; wait before trying a live read again.
+
+## Netlify verification limit
+
+The direct headless browser navigation in this execution environment returned ERR_EMPTY_RESPONSE, so a new browser interaction pass on the Netlify origin was not completed. Public HTTP retrieval and byte comparisons succeeded; the same packaged build had passed the documented responsive checks. The final public URL is now recorded in the README, deployment guide, and submission notes.
