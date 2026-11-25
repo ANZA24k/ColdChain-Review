@@ -46,3 +46,7 @@ The correction uses response_format="json" while retaining schema, quotation, in
 The local browser integration uses a Node transport bridge to the actual public RPC because this execution environment's browser networking differs. Public website reads were also exercised directly in the interactive browser. Intermittent Studio rate limits and connection failures are surfaced as request errors and do not authorize replaying a submitted transaction.
 
 The synthetic 2–8°C example is an agreed fixture, not a product safety recommendation. Sensor authenticity, custody, safety certification, and release authority remain outside scope. No public social post was created.
+
+## Final package recheck
+
+The final static package again passed all 15 responsive/navigation/missing-wallet checks. The last headless six-receipt browser recheck was blocked by the public RPC returning HTTP 429 (30 requests per minute), so that particular browser run did not pass. The independent finalized contract/source/hash verification had already succeeded for round 2 and all six receipts. This temporary service limit does not invalidate the committed record; wait before trying a live read again.
