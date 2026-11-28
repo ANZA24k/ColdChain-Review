@@ -955,3 +955,15 @@ summary {
 .receipt-decision .pill {
   font-size: 0.75rem;
 }
+
+.comparison fieldset { min-width: 0; border: 1px solid #dce5e2; border-radius: 12px; padding: 18px; }
+.comparison legend { font-weight: 700; padding: 0 6px; }
+.comparison input { width: 100%; min-width: 0; box-sizing: border-box; }
+.comparison label { display: block; margin-bottom: 14px; }
+.comparison .comparison-scroll { overflow-x: auto; margin: 24px 0; }
+.comparison table { width: 100%; border-collapse: collapse; text-align: left; }
+.comparison th, .comparison td { padding: 12px; border-bottom: 1px solid #dce5e2; }
+.comparison caption { text-align: left; padding-bottom: 12px; color: #536762; }
+.comparison code, .comparison li, .comparison blockquote { overflow-wrap: anywhere; }
+.comparison .form-grid > div { min-width: 0; }
+.comparison blockquote { margin: 12px 0; padding-left: 12px; border-left: 3px solid #b0d7c1; }

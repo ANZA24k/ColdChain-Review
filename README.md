@@ -47,3 +47,13 @@ Evidence is canonical JSON hashed with SHA-256. Maximum policy size is 5,000 UTF
 This verifies supplied handling evidence. It does not authenticate sensors, certify product safety, or authorize product release. All submitted evidence is public. Studionet can reset. Future operational integrations could add signed logger records and custody attestations; these are not implemented.
 
 See [deployment](docs/DEPLOYMENT.md), [architecture](docs/ARCHITECTURE.md), and [submission notes](docs/SUBMISSION.md).
+
+## Shipment comparison — milestone v1
+
+The new **Shipment comparison** workspace compares finalized records or exported shipment files. It verifies both receipt histories and commitments, independently recomputes temperature excursions, and displays assessment-round changes with grounded quotations. Exact policy mismatches and duplicate shipment selections are flagged. Export a portable report and recheck it using:
+
+```sh
+node --experimental-strip-types scripts/verify-comparison.mjs coldchain-comparison.json
+```
+
+Offline checks prove internal integrity only. See the [documented milestone delta, walkthrough and evidence](docs/milestone-v1.md). No contract redeployment is required.

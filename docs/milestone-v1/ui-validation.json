@@ -1,0 +1,55 @@
+{
+  "date": "2026-11-28T08:08:56.874Z",
+  "mode": "captured historical fixture, offline integrity only",
+  "results": [
+    {
+      "width": 390,
+      "passed": [
+        "offline import",
+        "receipt verification",
+        "both assessment rounds",
+        "same shipment warning",
+        "report download and hash",
+        "stale report cleared",
+        "tamper rejected",
+        "no overflow",
+        "no runtime errors"
+      ]
+    },
+    {
+      "width": 768,
+      "passed": [
+        "offline import",
+        "receipt verification",
+        "both assessment rounds",
+        "same shipment warning",
+        "report download and hash",
+        "stale report cleared",
+        "tamper rejected",
+        "no overflow",
+        "no runtime errors"
+      ]
+    },
+    {
+      "width": 1440,
+      "passed": [
+        "offline import",
+        "receipt verification",
+        "both assessment rounds",
+        "same shipment warning",
+        "report download and hash",
+        "stale report cleared",
+        "tamper rejected",
+        "no overflow",
+        "no runtime errors"
+      ]
+    },
+    {
+      "mode": "fresh finalized RPC read using a browser request bridge",
+      "sameShipment": true,
+      "receipts": 6,
+      "assessmentRounds": 2,
+      "sha256": "430f183e9e82e1a1c38a77c492085471236983ffcfe4d05c55dc8efee0ce068d"
+    }
+  ]
+}

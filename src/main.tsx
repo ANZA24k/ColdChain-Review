@@ -29,6 +29,7 @@ import {
 import { policy, evidence, compliantEvidence } from "./fixtures";
 import config from "./config.json";
 import "./style.css";
+import { Comparison } from "./comparison";
 function App() {
   const [tab, setTab] = useState("Overview"),
     [id, setId] = useState("CCR-LIVE-001"),
@@ -83,7 +84,7 @@ function App() {
     );
     const r = await readShipment(id);
     const h = await fetchReceipts(id, r.sequence);
-    await verifyHistory(r, h);
+    await verifyHistory(r, h, id);
     setRecord(r);
     setExample(false);
     setReceipts(h);
@@ -125,6 +126,7 @@ function App() {
         JSON.stringify(
           {
             network: config.network,
+            chainId: config.chainId,
             contract: address,
             shipment: id,
             record,
@@ -166,6 +168,7 @@ function App() {
             ["Overview", Activity],
             ["Shipment workspace", Package],
             ["Receipt ledger", FileCheck2],
+            ["Shipment comparison", Activity],
             ["How it works", BookOpen],
           ].map(([label, Icon]: any) => (
             <button
@@ -704,6 +707,7 @@ function App() {
               )}
             </section>
           )}
+          {tab === "Shipment comparison" && <Comparison />}
           {tab === "How it works" && (
             <>
               <section className="card prose">

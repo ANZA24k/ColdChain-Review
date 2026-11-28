@@ -1,0 +1,546 @@
+{
+  "payload": {
+    "schema": "coldchain-comparison/v1",
+    "contract": "0xeC25c1Cf6F45c2623bE79f48ADF927ce7F1966dA",
+    "chainId": 61999,
+    "sameShipment": true,
+    "samePolicy": true,
+    "sameEvidence": true,
+    "left": {
+      "shipment": "CCR-LIVE-001",
+      "head": "1d0c9d53956a3dc479bfd8981007a14ce9bc3175c3fee0fe713e21bed3e76362",
+      "phase": "REVIEWED",
+      "policy_hash": "cab8b9e9d4183c4125ebebeb7b8a31557728344c8a0e824f686c54aa45333b6a",
+      "evidence_hash": "be3a878e5f6df1be00a49287dda867da92d4cfd89b85245c5c5e1180096b6a84",
+      "metrics": {
+        "status": "EXCEPTION_REVIEW",
+        "total_excursion_s": 600,
+        "longest_excursion_s": 600,
+        "hard_breach": false,
+        "coverage_gap": false,
+        "excursion_count": 1,
+        "min_observed_mc": 4500,
+        "max_observed_mc": 9000,
+        "excursions": [
+          {
+            "start": 1795479600,
+            "end": 1795480200,
+            "duration_s": 600
+          }
+        ]
+      },
+      "assessments": [
+        {
+          "round": 1,
+          "sequence": 4,
+          "coverage_gap": false,
+          "excursion_count": 1,
+          "hard_breach": false,
+          "incident_quote": "During unloading, the sealed shipment reached 9°C for 600 seconds. The shipment remained sealed throughout unloading.",
+          "longest_excursion_s": 600,
+          "max_observed_mc": 9000,
+          "min_observed_mc": 4500,
+          "policy_quote": "A single unloading excursion up to 900 seconds at or below 10000 milli-Celsius is permitted if the incident report identifies unloading, states the duration, and confirms the shipment remained sealed.",
+          "reason": "The single 600-second unloading excursion peaked at 9000 milli-Celsius, within the exception's 900-second and 10000 milli-Celsius limits. The incident states unloading, duration, and continued sealing, consistent with the readings and metrics. All readings remain within hard limits; the minimum is above the soft minimum. Total excursion time is 600 seconds, and there is no coverage gap or additional excursion. The exception explicitly permits the measured soft-limit overruns.",
+          "status": "COMPLIANT",
+          "total_excursion_s": 600
+        },
+        {
+          "round": 2,
+          "sequence": 6,
+          "coverage_gap": false,
+          "excursion_count": 1,
+          "hard_breach": false,
+          "incident_quote": "During unloading, the sealed shipment reached 9°C for 600 seconds. The shipment remained sealed throughout unloading.",
+          "longest_excursion_s": 600,
+          "max_observed_mc": 9000,
+          "min_observed_mc": 4500,
+          "policy_quote": "A single unloading excursion up to 900 seconds at or below 10000 milli-Celsius is permitted if the incident report identifies unloading, states the duration, and confirms the shipment remained sealed.",
+          "reason": "The measured excursion is 600 seconds at 9000 milli-Celsius (9°C), which is below the 900-second and 10000 milli-Celsius limits. The incident confirms unloading, states the duration, and confirms the shipment remained sealed, thus satisfying all prerequisites of the unloading exception clause.",
+          "status": "COMPLIANT",
+          "total_excursion_s": 600
+        }
+      ],
+      "challenge": "Please reassess the relationship between the normal 300-second excursion cap and the explicit unloading exception of up to 900 seconds. The log records one 600-second excursion at 9000 milli-Celsius and the incident confirms the shipment remained sealed. Does the locked exception permit this documented excursion?"
+    },
+    "right": {
+      "shipment": "CCR-LIVE-001",
+      "head": "1d0c9d53956a3dc479bfd8981007a14ce9bc3175c3fee0fe713e21bed3e76362",
+      "phase": "REVIEWED",
+      "policy_hash": "cab8b9e9d4183c4125ebebeb7b8a31557728344c8a0e824f686c54aa45333b6a",
+      "evidence_hash": "be3a878e5f6df1be00a49287dda867da92d4cfd89b85245c5c5e1180096b6a84",
+      "metrics": {
+        "status": "EXCEPTION_REVIEW",
+        "total_excursion_s": 600,
+        "longest_excursion_s": 600,
+        "hard_breach": false,
+        "coverage_gap": false,
+        "excursion_count": 1,
+        "min_observed_mc": 4500,
+        "max_observed_mc": 9000,
+        "excursions": [
+          {
+            "start": 1795479600,
+            "end": 1795480200,
+            "duration_s": 600
+          }
+        ]
+      },
+      "assessments": [
+        {
+          "round": 1,
+          "sequence": 4,
+          "coverage_gap": false,
+          "excursion_count": 1,
+          "hard_breach": false,
+          "incident_quote": "During unloading, the sealed shipment reached 9°C for 600 seconds. The shipment remained sealed throughout unloading.",
+          "longest_excursion_s": 600,
+          "max_observed_mc": 9000,
+          "min_observed_mc": 4500,
+          "policy_quote": "A single unloading excursion up to 900 seconds at or below 10000 milli-Celsius is permitted if the incident report identifies unloading, states the duration, and confirms the shipment remained sealed.",
+          "reason": "The single 600-second unloading excursion peaked at 9000 milli-Celsius, within the exception's 900-second and 10000 milli-Celsius limits. The incident states unloading, duration, and continued sealing, consistent with the readings and metrics. All readings remain within hard limits; the minimum is above the soft minimum. Total excursion time is 600 seconds, and there is no coverage gap or additional excursion. The exception explicitly permits the measured soft-limit overruns.",
+          "status": "COMPLIANT",
+          "total_excursion_s": 600
+        },
+        {
+          "round": 2,
+          "sequence": 6,
+          "coverage_gap": false,
+          "excursion_count": 1,
+          "hard_breach": false,
+          "incident_quote": "During unloading, the sealed shipment reached 9°C for 600 seconds. The shipment remained sealed throughout unloading.",
+          "longest_excursion_s": 600,
+          "max_observed_mc": 9000,
+          "min_observed_mc": 4500,
+          "policy_quote": "A single unloading excursion up to 900 seconds at or below 10000 milli-Celsius is permitted if the incident report identifies unloading, states the duration, and confirms the shipment remained sealed.",
+          "reason": "The measured excursion is 600 seconds at 9000 milli-Celsius (9°C), which is below the 900-second and 10000 milli-Celsius limits. The incident confirms unloading, states the duration, and confirms the shipment remained sealed, thus satisfying all prerequisites of the unloading exception clause.",
+          "status": "COMPLIANT",
+          "total_excursion_s": 600
+        }
+      ],
+      "challenge": "Please reassess the relationship between the normal 300-second excursion cap and the explicit unloading exception of up to 900 seconds. The log records one 600-second excursion at 9000 milli-Celsius and the incident confirms the shipment remained sealed. Does the locked exception permit this documented excursion?"
+    },
+    "delta": {
+      "total_excursion_s": 0,
+      "longest_excursion_s": 0,
+      "max_observed_mc": 0,
+      "excursion_count": 0
+    },
+    "observedAt": "2026-11-28T08:06:58.302Z",
+    "sources": [
+      "OFFLINE_INTEGRITY_ONLY",
+      "OFFLINE_INTEGRITY_ONLY"
+    ],
+    "bundles": [
+      {
+        "contract": "0xeC25c1Cf6F45c2623bE79f48ADF927ce7F1966dA",
+        "chainId": 61999,
+        "shipment": "CCR-LIVE-001",
+        "record": {
+          "challenge": "Please reassess the relationship between the normal 300-second excursion cap and the explicit unloading exception of up to 900 seconds. The log records one 600-second excursion at 9000 milli-Celsius and the incident confirms the shipment remained sealed. Does the locked exception permit this documented excursion?",
+          "counterparty": "0xcD72fA5B6A496d84B4A10bCFF31D3B7c12346a9e",
+          "evidence": {
+            "incident": "During unloading, the sealed shipment reached 9°C for 600 seconds. The shipment remained sealed throughout unloading.",
+            "readings": [
+              [
+                1795478400,
+                4500
+              ],
+              [
+                1795479000,
+                5000
+              ],
+              [
+                1795479600,
+                9000
+              ],
+              [
+                1795480200,
+                5000
+              ],
+              [
+                1795480800,
+                4500
+              ],
+              [
+                1795481400,
+                4500
+              ],
+              [
+                1795482000,
+                4500
+              ]
+            ],
+            "source": "Synthetic verification fixture CCR-LIVE-001. Not a sensor attestation."
+          },
+          "evidence_hash": "be3a878e5f6df1be00a49287dda867da92d4cfd89b85245c5c5e1180096b6a84",
+          "head": "1d0c9d53956a3dc479bfd8981007a14ce9bc3175c3fee0fe713e21bed3e76362",
+          "owner": "0xcD72fA5B6A496d84B4A10bCFF31D3B7c12346a9e",
+          "phase": "REVIEWED",
+          "policy": {
+            "end": 1795482000,
+            "exception_clause": "A single unloading excursion up to 900 seconds at or below 10000 milli-Celsius is permitted if the incident report identifies unloading, states the duration, and confirms the shipment remained sealed. No other excursion is permitted.",
+            "hard_max_mc": 15000,
+            "hard_min_mc": 0,
+            "max_excursion_s": 300,
+            "max_gap_s": 600,
+            "max_mc": 8000,
+            "max_total_s": 600,
+            "min_mc": 2000,
+            "name": "Synthetic unloading exception verification",
+            "start": 1795478400
+          },
+          "policy_hash": "cab8b9e9d4183c4125ebebeb7b8a31557728344c8a0e824f686c54aa45333b6a",
+          "result": {
+            "coverage_gap": false,
+            "excursion_count": 1,
+            "hard_breach": false,
+            "incident_quote": "During unloading, the sealed shipment reached 9°C for 600 seconds. The shipment remained sealed throughout unloading.",
+            "longest_excursion_s": 600,
+            "max_observed_mc": 9000,
+            "min_observed_mc": 4500,
+            "policy_quote": "A single unloading excursion up to 900 seconds at or below 10000 milli-Celsius is permitted if the incident report identifies unloading, states the duration, and confirms the shipment remained sealed.",
+            "reason": "The measured excursion is 600 seconds at 9000 milli-Celsius (9°C), which is below the 900-second and 10000 milli-Celsius limits. The incident confirms unloading, states the duration, and confirms the shipment remained sealed, thus satisfying all prerequisites of the unloading exception clause.",
+            "status": "COMPLIANT",
+            "total_excursion_s": 600
+          },
+          "round": 2,
+          "sequence": 6
+        },
+        "receipts": [
+          {
+            "action": "REGISTER",
+            "actor": "0xcD72fA5B6A496d84B4A10bCFF31D3B7c12346a9e",
+            "challenge_hash": "12ae32cb1ec02d01eda3581b127c1fee3b0dc53572ed6baf239721a03d82e126",
+            "evidence_hash": "",
+            "hash": "8432bcf8657bdfd71538755fd3a96a93e82a2c4b536213904a3bb75c07eb56f4",
+            "phase": "REGISTERED",
+            "policy_hash": "cab8b9e9d4183c4125ebebeb7b8a31557728344c8a0e824f686c54aa45333b6a",
+            "previous": "0000000000000000000000000000000000000000000000000000000000000000",
+            "result": null,
+            "round": 0,
+            "sequence": 1,
+            "shipment": "CCR-LIVE-001",
+            "state": "4b150e9da32684b77d0af925529189271a02f2bdc557e7b88b45773b00d04f42"
+          },
+          {
+            "action": "ACCEPT_POLICY",
+            "actor": "0xcD72fA5B6A496d84B4A10bCFF31D3B7c12346a9e",
+            "challenge_hash": "12ae32cb1ec02d01eda3581b127c1fee3b0dc53572ed6baf239721a03d82e126",
+            "evidence_hash": "",
+            "hash": "f3ab135bdc1281c45f122ef96f170dba54e0ae32c5b33f9f78ad797e084af737",
+            "phase": "LOCKED",
+            "policy_hash": "cab8b9e9d4183c4125ebebeb7b8a31557728344c8a0e824f686c54aa45333b6a",
+            "previous": "8432bcf8657bdfd71538755fd3a96a93e82a2c4b536213904a3bb75c07eb56f4",
+            "result": null,
+            "round": 0,
+            "sequence": 2,
+            "shipment": "CCR-LIVE-001",
+            "state": "1652f5b681e54cb3270abb8f4452d31c45c32b4b6afc91e54a995aa373864bf2"
+          },
+          {
+            "action": "SUBMIT_EVIDENCE",
+            "actor": "0xcD72fA5B6A496d84B4A10bCFF31D3B7c12346a9e",
+            "challenge_hash": "12ae32cb1ec02d01eda3581b127c1fee3b0dc53572ed6baf239721a03d82e126",
+            "evidence_hash": "be3a878e5f6df1be00a49287dda867da92d4cfd89b85245c5c5e1180096b6a84",
+            "hash": "bc203fb532afe007f3fbb5907aa74ae040c7e1cca1e696abceffceda65ed5c4b",
+            "phase": "SUBMITTED",
+            "policy_hash": "cab8b9e9d4183c4125ebebeb7b8a31557728344c8a0e824f686c54aa45333b6a",
+            "previous": "f3ab135bdc1281c45f122ef96f170dba54e0ae32c5b33f9f78ad797e084af737",
+            "result": null,
+            "round": 0,
+            "sequence": 3,
+            "shipment": "CCR-LIVE-001",
+            "state": "14292a1d5d7374557b719226bb252bce153963412715930d4655b5ca3d7c633e"
+          },
+          {
+            "action": "ASSESS",
+            "actor": "0xcD72fA5B6A496d84B4A10bCFF31D3B7c12346a9e",
+            "challenge_hash": "12ae32cb1ec02d01eda3581b127c1fee3b0dc53572ed6baf239721a03d82e126",
+            "evidence_hash": "be3a878e5f6df1be00a49287dda867da92d4cfd89b85245c5c5e1180096b6a84",
+            "hash": "3c4782d270beba54d0baa9b48335e313af2400fb8444c350d200df4b6133c619",
+            "phase": "REVIEWED",
+            "policy_hash": "cab8b9e9d4183c4125ebebeb7b8a31557728344c8a0e824f686c54aa45333b6a",
+            "previous": "bc203fb532afe007f3fbb5907aa74ae040c7e1cca1e696abceffceda65ed5c4b",
+            "result": {
+              "coverage_gap": false,
+              "excursion_count": 1,
+              "hard_breach": false,
+              "incident_quote": "During unloading, the sealed shipment reached 9°C for 600 seconds. The shipment remained sealed throughout unloading.",
+              "longest_excursion_s": 600,
+              "max_observed_mc": 9000,
+              "min_observed_mc": 4500,
+              "policy_quote": "A single unloading excursion up to 900 seconds at or below 10000 milli-Celsius is permitted if the incident report identifies unloading, states the duration, and confirms the shipment remained sealed.",
+              "reason": "The single 600-second unloading excursion peaked at 9000 milli-Celsius, within the exception's 900-second and 10000 milli-Celsius limits. The incident states unloading, duration, and continued sealing, consistent with the readings and metrics. All readings remain within hard limits; the minimum is above the soft minimum. Total excursion time is 600 seconds, and there is no coverage gap or additional excursion. The exception explicitly permits the measured soft-limit overruns.",
+              "status": "COMPLIANT",
+              "total_excursion_s": 600
+            },
+            "round": 1,
+            "sequence": 4,
+            "shipment": "CCR-LIVE-001",
+            "state": "b4c56a2faeb5eb302ba835862339b3365aa1bedfb23edb670af744f34c6588fa"
+          },
+          {
+            "action": "CHALLENGE",
+            "actor": "0xcD72fA5B6A496d84B4A10bCFF31D3B7c12346a9e",
+            "challenge_hash": "abd8a78079690d8d7f7b0796c70f1d7d75adfb610a13f824d40020023434cdda",
+            "evidence_hash": "be3a878e5f6df1be00a49287dda867da92d4cfd89b85245c5c5e1180096b6a84",
+            "hash": "290c1f509e2bf6161b8046f810ba562f1d7e13ea3ca2275b5d48582ed91e1e81",
+            "phase": "CHALLENGED",
+            "policy_hash": "cab8b9e9d4183c4125ebebeb7b8a31557728344c8a0e824f686c54aa45333b6a",
+            "previous": "3c4782d270beba54d0baa9b48335e313af2400fb8444c350d200df4b6133c619",
+            "result": {
+              "coverage_gap": false,
+              "excursion_count": 1,
+              "hard_breach": false,
+              "incident_quote": "During unloading, the sealed shipment reached 9°C for 600 seconds. The shipment remained sealed throughout unloading.",
+              "longest_excursion_s": 600,
+              "max_observed_mc": 9000,
+              "min_observed_mc": 4500,
+              "policy_quote": "A single unloading excursion up to 900 seconds at or below 10000 milli-Celsius is permitted if the incident report identifies unloading, states the duration, and confirms the shipment remained sealed.",
+              "reason": "The single 600-second unloading excursion peaked at 9000 milli-Celsius, within the exception's 900-second and 10000 milli-Celsius limits. The incident states unloading, duration, and continued sealing, consistent with the readings and metrics. All readings remain within hard limits; the minimum is above the soft minimum. Total excursion time is 600 seconds, and there is no coverage gap or additional excursion. The exception explicitly permits the measured soft-limit overruns.",
+              "status": "COMPLIANT",
+              "total_excursion_s": 600
+            },
+            "round": 1,
+            "sequence": 5,
+            "shipment": "CCR-LIVE-001",
+            "state": "dddeb554ad45d6a67820109f20a836e5368564b2cd503571beed96f8accd68b5"
+          },
+          {
+            "action": "ASSESS",
+            "actor": "0xcD72fA5B6A496d84B4A10bCFF31D3B7c12346a9e",
+            "challenge_hash": "abd8a78079690d8d7f7b0796c70f1d7d75adfb610a13f824d40020023434cdda",
+            "evidence_hash": "be3a878e5f6df1be00a49287dda867da92d4cfd89b85245c5c5e1180096b6a84",
+            "hash": "1d0c9d53956a3dc479bfd8981007a14ce9bc3175c3fee0fe713e21bed3e76362",
+            "phase": "REVIEWED",
+            "policy_hash": "cab8b9e9d4183c4125ebebeb7b8a31557728344c8a0e824f686c54aa45333b6a",
+            "previous": "290c1f509e2bf6161b8046f810ba562f1d7e13ea3ca2275b5d48582ed91e1e81",
+            "result": {
+              "coverage_gap": false,
+              "excursion_count": 1,
+              "hard_breach": false,
+              "incident_quote": "During unloading, the sealed shipment reached 9°C for 600 seconds. The shipment remained sealed throughout unloading.",
+              "longest_excursion_s": 600,
+              "max_observed_mc": 9000,
+              "min_observed_mc": 4500,
+              "policy_quote": "A single unloading excursion up to 900 seconds at or below 10000 milli-Celsius is permitted if the incident report identifies unloading, states the duration, and confirms the shipment remained sealed.",
+              "reason": "The measured excursion is 600 seconds at 9000 milli-Celsius (9°C), which is below the 900-second and 10000 milli-Celsius limits. The incident confirms unloading, states the duration, and confirms the shipment remained sealed, thus satisfying all prerequisites of the unloading exception clause.",
+              "status": "COMPLIANT",
+              "total_excursion_s": 600
+            },
+            "round": 2,
+            "sequence": 6,
+            "shipment": "CCR-LIVE-001",
+            "state": "98239b577cf6710c4d66ecafd871739d52cc4c51fb4cc87d7081126b32ca02de"
+          }
+        ]
+      },
+      {
+        "contract": "0xeC25c1Cf6F45c2623bE79f48ADF927ce7F1966dA",
+        "chainId": 61999,
+        "shipment": "CCR-LIVE-001",
+        "record": {
+          "challenge": "Please reassess the relationship between the normal 300-second excursion cap and the explicit unloading exception of up to 900 seconds. The log records one 600-second excursion at 9000 milli-Celsius and the incident confirms the shipment remained sealed. Does the locked exception permit this documented excursion?",
+          "counterparty": "0xcD72fA5B6A496d84B4A10bCFF31D3B7c12346a9e",
+          "evidence": {
+            "incident": "During unloading, the sealed shipment reached 9°C for 600 seconds. The shipment remained sealed throughout unloading.",
+            "readings": [
+              [
+                1795478400,
+                4500
+              ],
+              [
+                1795479000,
+                5000
+              ],
+              [
+                1795479600,
+                9000
+              ],
+              [
+                1795480200,
+                5000
+              ],
+              [
+                1795480800,
+                4500
+              ],
+              [
+                1795481400,
+                4500
+              ],
+              [
+                1795482000,
+                4500
+              ]
+            ],
+            "source": "Synthetic verification fixture CCR-LIVE-001. Not a sensor attestation."
+          },
+          "evidence_hash": "be3a878e5f6df1be00a49287dda867da92d4cfd89b85245c5c5e1180096b6a84",
+          "head": "1d0c9d53956a3dc479bfd8981007a14ce9bc3175c3fee0fe713e21bed3e76362",
+          "owner": "0xcD72fA5B6A496d84B4A10bCFF31D3B7c12346a9e",
+          "phase": "REVIEWED",
+          "policy": {
+            "end": 1795482000,
+            "exception_clause": "A single unloading excursion up to 900 seconds at or below 10000 milli-Celsius is permitted if the incident report identifies unloading, states the duration, and confirms the shipment remained sealed. No other excursion is permitted.",
+            "hard_max_mc": 15000,
+            "hard_min_mc": 0,
+            "max_excursion_s": 300,
+            "max_gap_s": 600,
+            "max_mc": 8000,
+            "max_total_s": 600,
+            "min_mc": 2000,
+            "name": "Synthetic unloading exception verification",
+            "start": 1795478400
+          },
+          "policy_hash": "cab8b9e9d4183c4125ebebeb7b8a31557728344c8a0e824f686c54aa45333b6a",
+          "result": {
+            "coverage_gap": false,
+            "excursion_count": 1,
+            "hard_breach": false,
+            "incident_quote": "During unloading, the sealed shipment reached 9°C for 600 seconds. The shipment remained sealed throughout unloading.",
+            "longest_excursion_s": 600,
+            "max_observed_mc": 9000,
+            "min_observed_mc": 4500,
+            "policy_quote": "A single unloading excursion up to 900 seconds at or below 10000 milli-Celsius is permitted if the incident report identifies unloading, states the duration, and confirms the shipment remained sealed.",
+            "reason": "The measured excursion is 600 seconds at 9000 milli-Celsius (9°C), which is below the 900-second and 10000 milli-Celsius limits. The incident confirms unloading, states the duration, and confirms the shipment remained sealed, thus satisfying all prerequisites of the unloading exception clause.",
+            "status": "COMPLIANT",
+            "total_excursion_s": 600
+          },
+          "round": 2,
+          "sequence": 6
+        },
+        "receipts": [
+          {
+            "action": "REGISTER",
+            "actor": "0xcD72fA5B6A496d84B4A10bCFF31D3B7c12346a9e",
+            "challenge_hash": "12ae32cb1ec02d01eda3581b127c1fee3b0dc53572ed6baf239721a03d82e126",
+            "evidence_hash": "",
+            "hash": "8432bcf8657bdfd71538755fd3a96a93e82a2c4b536213904a3bb75c07eb56f4",
+            "phase": "REGISTERED",
+            "policy_hash": "cab8b9e9d4183c4125ebebeb7b8a31557728344c8a0e824f686c54aa45333b6a",
+            "previous": "0000000000000000000000000000000000000000000000000000000000000000",
+            "result": null,
+            "round": 0,
+            "sequence": 1,
+            "shipment": "CCR-LIVE-001",
+            "state": "4b150e9da32684b77d0af925529189271a02f2bdc557e7b88b45773b00d04f42"
+          },
+          {
+            "action": "ACCEPT_POLICY",
+            "actor": "0xcD72fA5B6A496d84B4A10bCFF31D3B7c12346a9e",
+            "challenge_hash": "12ae32cb1ec02d01eda3581b127c1fee3b0dc53572ed6baf239721a03d82e126",
+            "evidence_hash": "",
+            "hash": "f3ab135bdc1281c45f122ef96f170dba54e0ae32c5b33f9f78ad797e084af737",
+            "phase": "LOCKED",
+            "policy_hash": "cab8b9e9d4183c4125ebebeb7b8a31557728344c8a0e824f686c54aa45333b6a",
+            "previous": "8432bcf8657bdfd71538755fd3a96a93e82a2c4b536213904a3bb75c07eb56f4",
+            "result": null,
+            "round": 0,
+            "sequence": 2,
+            "shipment": "CCR-LIVE-001",
+            "state": "1652f5b681e54cb3270abb8f4452d31c45c32b4b6afc91e54a995aa373864bf2"
+          },
+          {
+            "action": "SUBMIT_EVIDENCE",
+            "actor": "0xcD72fA5B6A496d84B4A10bCFF31D3B7c12346a9e",
+            "challenge_hash": "12ae32cb1ec02d01eda3581b127c1fee3b0dc53572ed6baf239721a03d82e126",
+            "evidence_hash": "be3a878e5f6df1be00a49287dda867da92d4cfd89b85245c5c5e1180096b6a84",
+            "hash": "bc203fb532afe007f3fbb5907aa74ae040c7e1cca1e696abceffceda65ed5c4b",
+            "phase": "SUBMITTED",
+            "policy_hash": "cab8b9e9d4183c4125ebebeb7b8a31557728344c8a0e824f686c54aa45333b6a",
+            "previous": "f3ab135bdc1281c45f122ef96f170dba54e0ae32c5b33f9f78ad797e084af737",
+            "result": null,
+            "round": 0,
+            "sequence": 3,
+            "shipment": "CCR-LIVE-001",
+            "state": "14292a1d5d7374557b719226bb252bce153963412715930d4655b5ca3d7c633e"
+          },
+          {
+            "action": "ASSESS",
+            "actor": "0xcD72fA5B6A496d84B4A10bCFF31D3B7c12346a9e",
+            "challenge_hash": "12ae32cb1ec02d01eda3581b127c1fee3b0dc53572ed6baf239721a03d82e126",
+            "evidence_hash": "be3a878e5f6df1be00a49287dda867da92d4cfd89b85245c5c5e1180096b6a84",
+            "hash": "3c4782d270beba54d0baa9b48335e313af2400fb8444c350d200df4b6133c619",
+            "phase": "REVIEWED",
+            "policy_hash": "cab8b9e9d4183c4125ebebeb7b8a31557728344c8a0e824f686c54aa45333b6a",
+            "previous": "bc203fb532afe007f3fbb5907aa74ae040c7e1cca1e696abceffceda65ed5c4b",
+            "result": {
+              "coverage_gap": false,
+              "excursion_count": 1,
+              "hard_breach": false,
+              "incident_quote": "During unloading, the sealed shipment reached 9°C for 600 seconds. The shipment remained sealed throughout unloading.",
+              "longest_excursion_s": 600,
+              "max_observed_mc": 9000,
+              "min_observed_mc": 4500,
+              "policy_quote": "A single unloading excursion up to 900 seconds at or below 10000 milli-Celsius is permitted if the incident report identifies unloading, states the duration, and confirms the shipment remained sealed.",
+              "reason": "The single 600-second unloading excursion peaked at 9000 milli-Celsius, within the exception's 900-second and 10000 milli-Celsius limits. The incident states unloading, duration, and continued sealing, consistent with the readings and metrics. All readings remain within hard limits; the minimum is above the soft minimum. Total excursion time is 600 seconds, and there is no coverage gap or additional excursion. The exception explicitly permits the measured soft-limit overruns.",
+              "status": "COMPLIANT",
+              "total_excursion_s": 600
+            },
+            "round": 1,
+            "sequence": 4,
+            "shipment": "CCR-LIVE-001",
+            "state": "b4c56a2faeb5eb302ba835862339b3365aa1bedfb23edb670af744f34c6588fa"
+          },
+          {
+            "action": "CHALLENGE",
+            "actor": "0xcD72fA5B6A496d84B4A10bCFF31D3B7c12346a9e",
+            "challenge_hash": "abd8a78079690d8d7f7b0796c70f1d7d75adfb610a13f824d40020023434cdda",
+            "evidence_hash": "be3a878e5f6df1be00a49287dda867da92d4cfd89b85245c5c5e1180096b6a84",
+            "hash": "290c1f509e2bf6161b8046f810ba562f1d7e13ea3ca2275b5d48582ed91e1e81",
+            "phase": "CHALLENGED",
+            "policy_hash": "cab8b9e9d4183c4125ebebeb7b8a31557728344c8a0e824f686c54aa45333b6a",
+            "previous": "3c4782d270beba54d0baa9b48335e313af2400fb8444c350d200df4b6133c619",
+            "result": {
+              "coverage_gap": false,
+              "excursion_count": 1,
+              "hard_breach": false,
+              "incident_quote": "During unloading, the sealed shipment reached 9°C for 600 seconds. The shipment remained sealed throughout unloading.",
+              "longest_excursion_s": 600,
+              "max_observed_mc": 9000,
+              "min_observed_mc": 4500,
+              "policy_quote": "A single unloading excursion up to 900 seconds at or below 10000 milli-Celsius is permitted if the incident report identifies unloading, states the duration, and confirms the shipment remained sealed.",
+              "reason": "The single 600-second unloading excursion peaked at 9000 milli-Celsius, within the exception's 900-second and 10000 milli-Celsius limits. The incident states unloading, duration, and continued sealing, consistent with the readings and metrics. All readings remain within hard limits; the minimum is above the soft minimum. Total excursion time is 600 seconds, and there is no coverage gap or additional excursion. The exception explicitly permits the measured soft-limit overruns.",
+              "status": "COMPLIANT",
+              "total_excursion_s": 600
+            },
+            "round": 1,
+            "sequence": 5,
+            "shipment": "CCR-LIVE-001",
+            "state": "dddeb554ad45d6a67820109f20a836e5368564b2cd503571beed96f8accd68b5"
+          },
+          {
+            "action": "ASSESS",
+            "actor": "0xcD72fA5B6A496d84B4A10bCFF31D3B7c12346a9e",
+            "challenge_hash": "abd8a78079690d8d7f7b0796c70f1d7d75adfb610a13f824d40020023434cdda",
+            "evidence_hash": "be3a878e5f6df1be00a49287dda867da92d4cfd89b85245c5c5e1180096b6a84",
+            "hash": "1d0c9d53956a3dc479bfd8981007a14ce9bc3175c3fee0fe713e21bed3e76362",
+            "phase": "REVIEWED",
+            "policy_hash": "cab8b9e9d4183c4125ebebeb7b8a31557728344c8a0e824f686c54aa45333b6a",
+            "previous": "290c1f509e2bf6161b8046f810ba562f1d7e13ea3ca2275b5d48582ed91e1e81",
+            "result": {
+              "coverage_gap": false,
+              "excursion_count": 1,
+              "hard_breach": false,
+              "incident_quote": "During unloading, the sealed shipment reached 9°C for 600 seconds. The shipment remained sealed throughout unloading.",
+              "longest_excursion_s": 600,
+              "max_observed_mc": 9000,
+              "min_observed_mc": 4500,
+              "policy_quote": "A single unloading excursion up to 900 seconds at or below 10000 milli-Celsius is permitted if the incident report identifies unloading, states the duration, and confirms the shipment remained sealed.",
+              "reason": "The measured excursion is 600 seconds at 9000 milli-Celsius (9°C), which is below the 900-second and 10000 milli-Celsius limits. The incident confirms unloading, states the duration, and confirms the shipment remained sealed, thus satisfying all prerequisites of the unloading exception clause.",
+              "status": "COMPLIANT",
+              "total_excursion_s": 600
+            },
+            "round": 2,
+            "sequence": 6,
+            "shipment": "CCR-LIVE-001",
+            "state": "98239b577cf6710c4d66ecafd871739d52cc4c51fb4cc87d7081126b32ca02de"
+          }
+        ]
+      }
+    ]
+  },
+  "sha256": "1cbef9e40c9ba3e5528926abbf1b9f72bcb3b53ff6e8cb93e3301df68763e1e5"
+}

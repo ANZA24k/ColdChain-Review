@@ -6,7 +6,9 @@
   "scripts": {
     "dev": "vite --host 0.0.0.0",
     "build": "tsc -b && vite build",
-    "test": "python -m unittest discover -s tests -v"
+    "test": "npm run test:contract && npm run test:audit",
+    "test:contract": "python -m unittest discover -s tests -v",
+    "test:audit": "node --experimental-strip-types --test tests/audit/*.test.mjs"
   },
   "dependencies": {
     "genlayer-js": "2.0.0",
