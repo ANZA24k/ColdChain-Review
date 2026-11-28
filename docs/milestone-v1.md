@@ -62,3 +62,13 @@ The captured fixture is synthetic and predates this milestone. Browser offline t
 **Changes & Improvements:** Added a shipment comparison workspace to ColdChainReview. Reviewers can compare finalized shipment records, inspect excursion intervals and measurement deltas, and trace both assessment rounds with supporting quotes and challenge rationale. The client independently verifies receipt chains, shipment identity, policy/evidence hashes and recomputed temperature metrics, rejecting tampered or inconsistent records. Different policies and duplicate shipment selections are flagged. Portable comparison reports include both evidence bundles and a SHA-256 payload hash; a new offline CLI rechecks report integrity without claiming chain authentication. Added adversarial tests, 256 Python-contract parity scenarios, responsive browser checks and CI. Existing contract source, address and explorer links are unchanged.
 
 Select **ColdChainReview / ColdChain-Review** as the linked project in Explorer; the originally pasted form selected Release Gate. This document supplies submission material; it does not claim that the contribution form has been submitted.
+
+## Published delta and CI evidence
+
+- [Implementation commit](https://github.com/ANZA24k/ColdChain-Review/commit/ad84a1bdca0bd25b9ea9c1c86042729329399868)
+- [Exact baseline-to-tested-update comparison](https://github.com/ANZA24k/ColdChain-Review/compare/5db9d95a43762c70592a6129005179ae2e00c79e...8456d4db32e3dc08a65f4afe14cbbf0c858e649f)
+- [Successful GitHub CI run](https://github.com/ANZA24k/ColdChain-Review/actions/runs/46124624768), including 29 contract tests, 24 audit tests (256 Python parity scenarios), production build and browser comparison checks. The run includes downloadable comparison-validation artifacts.
+
+The tested release pins Ubuntu 24.04 because the project's Playwright version does not support the newer ubuntu-latest runner image. All checks pass on the pinned runner.
+
+The existing Netlify site has **not** been updated in this milestone session because browser sign-in was not completed. `ColdChainReview-Milestone-v1-Netlify.zip` contains the verified production build for manual deployment to the existing site, preserving its URL. ZIP SHA-256: `da4c831867be73afab6ba779dd1ef821e5868643bd9a371e29bed3c64a734e37`. No public website deployment or contribution-form submission is claimed.
